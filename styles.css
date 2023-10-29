@@ -1,0 +1,80 @@
+/* Import font from google font */
+@import url('https://fonts.googleapis.com/css2?family=Cookie&display=swap');
+
+/* Makes the page work with mobile devices */
+@media (max-width: 768px) {
+    #cookie {
+        width: 50%;
+    }
+    #upgrades {
+        flex-direction: column;
+    }
+}
+
+/* Changing the html body of the page and adds a background image */
+body {
+    font-family: 'Cookie', cursive;
+    color: white;
+    text-align: center;
+    background-image: url('milk.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Cookie bouncing effect */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* Styling the cookie and making it hover, when the mouse is above it */
+#cookie {
+    cursor: pointer;
+    transition: transform 0.3s ease;
+}
+
+#cookie:active {
+    animation: bounce 0.5s;
+}
+
+#cookie:hover {
+    transform: scale(1.1);
+}
+
+.cookie-count {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+/* Styling the upgrade buttons */
+#buyAutoClicker, #buyMultiplier, #buyBakery {
+    background-color: #008CBA;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Making box shadow around the upgrade buttons */
+#upgrades button {
+    margin: 5px 0;
+    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.2);
+    border: 1px solid #ccc;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Making the upgrade buttons hover and focus */
+#upgrades button:hover {
+    transform: scale(1.05);
+}
+
+#upgrades button:focus {
+    outline: 2px solid #008CBA;
+}
+
+#upgrades div {
+    margin: 5px 0;
+}
